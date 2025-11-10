@@ -49,15 +49,8 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Send to Discord webhook
-    const webhookUrl = process.env.DISCORD_WEBHOOK_URL
-    if (!webhookUrl) {
-      console.error('Discord webhook URL not configured')
-      return NextResponse.json(
-        { error: 'Webhook not configured' },
-        { status: 500 }
-      )
-    }
+    // Send to Discord webhook (hardcoded for investment proposals)
+    const webhookUrl = 'https://discord.com/api/webhooks/1437538267280048169/9nKUdOc1a5Udej0adteD_zItezU8qo6Q1Im39scMLm75TQnSzPpqoaw9snTzjK3UGprD'
 
     const discordResponse = await fetch(webhookUrl, {
       method: 'POST',
