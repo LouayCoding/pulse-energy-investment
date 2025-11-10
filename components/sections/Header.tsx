@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { Phone, Mail, MapPin } from 'lucide-react'
 
 export default function Header() {
   return (
@@ -67,17 +68,24 @@ export default function Header() {
             <p className="text-gray-600">CEO & Founder</p>
           </div>
           <div className="flex flex-col items-center gap-1">
-            <p className="text-gray-600">📞 +31 6 41237903</p>
+            <div className="flex items-center gap-2 text-gray-600">
+              <Phone className="w-4 h-4" />
+              <span>+31 6 41237903</span>
+            </div>
             <p className="text-gray-500 text-xs">(WhatsApp)</p>
           </div>
           <div className="flex flex-col items-center gap-1">
-            <p className="text-gray-600">✉️ info@pulse-energy.nl</p>
+            <div className="flex items-center gap-2 text-gray-600">
+              <Mail className="w-4 h-4" />
+              <span>info@pulse-energy.nl</span>
+            </div>
             <p className="text-gray-500 text-xs">Response within 4h</p>
           </div>
         </div>
-        <p className="mt-4 text-xs text-gray-500 italic">
-          Stuwstraat 244, 2516 TS Den Haag, Nederland
-        </p>
+        <div className="mt-4 flex items-center justify-center gap-2 text-xs text-gray-500 italic">
+          <MapPin className="w-3 h-3" />
+          <span>Stuwstraat 244, 2516 TS Den Haag, Nederland</span>
+        </div>
       </motion.div>
     </motion.div>
   )

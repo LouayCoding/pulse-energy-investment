@@ -28,7 +28,13 @@
   }
   
   .pulse-card {
-    @apply bg-white rounded-xl p-8 transition-all duration-200;
+    @apply bg-white rounded-xl p-8 lg:p-12 shadow-sm hover:shadow-md transition-all duration-200;
+  }
+  
+  @media (max-width: 768px) {
+    .pulse-card {
+      @apply p-6;
+    }
   }
   
   .signature-canvas {

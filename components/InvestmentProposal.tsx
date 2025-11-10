@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import SignatureCanvas from 'react-signature-canvas'
+import { CheckCircle2 } from 'lucide-react'
 import Header from './sections/Header'
 import ExecutiveSummary from './sections/ExecutiveSummary'
 import KeyTerms from './sections/KeyTerms'
@@ -128,7 +129,9 @@ export default function InvestmentProposal() {
         className="min-h-screen bg-gray-50 flex items-center justify-center p-4"
       >
         <div className="pulse-card text-center max-w-md">
-          <div className="text-green-500 text-6xl mb-4">✓</div>
+          <div className="flex justify-center mb-4">
+            <CheckCircle2 className="w-24 h-24 text-green-500" />
+          </div>
           <h2 className="font-montserrat text-2xl font-bold text-gray-900 mb-4">
             Proposal Submitted Successfully!
           </h2>
@@ -147,7 +150,7 @@ export default function InvestmentProposal() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-5xl mx-auto px-4 py-12 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 py-12 lg:px-12 xl:px-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -155,7 +158,7 @@ export default function InvestmentProposal() {
         >
           <Header />
           
-          <div className="space-y-8">
+          <div className="space-y-12">
             <ExecutiveSummary />
             <KeyTerms />
             <MarketOpportunity />

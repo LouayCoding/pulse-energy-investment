@@ -26,7 +26,7 @@ export default function ExecutiveSummary() {
           <p><strong>Lost Sales:</strong> €150,000+ in confirmed orders cannot be fulfilled due to production constraints</p>
           <p><strong>Retailer Pressure:</strong> Albert Heijn, Jumbo, and Plus demanding increased supply commitments</p>
           <p><strong>Competition Risk:</strong> Competitors gaining shelf space while we cannot meet demand</p>
-          <p><strong>Time Critical:</strong> Investment needed within 30 days to secure Q1 2025 production slots</p>
+          <p><strong>Time Critical:</strong> Investment needed within 30 days to secure Q2 2026 production slots</p>
         </div>
       </div>
 

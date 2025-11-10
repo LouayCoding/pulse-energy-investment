@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { RefObject } from 'react'
 import SignatureCanvas from 'react-signature-canvas'
 import { InvestorData } from '@/types'
+import { Check } from 'lucide-react'
 
 interface SignatureSectionProps {
   investorData: InvestorData
@@ -194,8 +195,9 @@ export default function SignatureSection({
                   Clear
                 </button>
                 {hasSignature && (
-                  <div className="px-4 py-2 bg-green-100 text-green-800 rounded-lg text-sm">
-                    ✓ Signature captured
+                  <div className="px-4 py-2 bg-green-100 text-green-800 rounded-lg text-sm flex items-center gap-2">
+                    <Check className="w-4 h-4" />
+                    <span>Signature captured</span>
                   </div>
                 )}
               </div>

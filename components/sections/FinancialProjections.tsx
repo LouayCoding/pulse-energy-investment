@@ -4,11 +4,11 @@ import { motion } from 'framer-motion'
 
 export default function FinancialProjections() {
   const projections = [
-    { year: '2025', revenue: '€205,000', units: '170,800', ebitda: '-€7,500', margin: '-3.7%' },
-    { year: '2026', revenue: '€525,000', units: '437,500', ebitda: '€73,500', margin: '14.0%' },
-    { year: '2027', revenue: '€930,000', units: '775,000', ebitda: '€195,300', margin: '21.0%' },
-    { year: '2028', revenue: '€1,460,000', units: '1,216,700', ebitda: '€367,920', margin: '25.2%' },
-    { year: '2029', revenue: '€2,150,000', units: '1,791,700', ebitda: '€602,000', margin: '28.0%' },
+    { year: '2026', revenue: '€205,000', units: '170,800', ebitda: '-€7,500', margin: '-3.7%' },
+    { year: '2027', revenue: '€525,000', units: '437,500', ebitda: '€73,500', margin: '14.0%' },
+    { year: '2028', revenue: '€930,000', units: '775,000', ebitda: '€195,300', margin: '21.0%' },
+    { year: '2029', revenue: '€1,460,000', units: '1,216,700', ebitda: '€367,920', margin: '25.2%' },
+    { year: '2030', revenue: '€2,150,000', units: '1,791,700', ebitda: '€602,000', margin: '28.0%' },
   ]
 
   const useOfProceeds = [
@@ -96,11 +96,11 @@ export default function FinancialProjections() {
         <h3 className="font-montserrat text-lg font-bold text-green-800 mb-4">Break-Even Analysis</h3>
         <div className="grid md:grid-cols-2 gap-6 text-sm text-green-700">
           <div>
-            <p><strong>Break-Even Point:</strong> Month 8 (Q1 2026) at €85,000 monthly revenue</p>
+            <p><strong>Break-Even Point:</strong> Month 8 (Q1 2027) at €85,000 monthly revenue</p>
             <p><strong>Cash Flow Positive:</strong> Month 10 with sustained €95,000+ monthly sales</p>
           </div>
           <div>
-            <p><strong>Investment Payback:</strong> 18 months from first sales (Q4 2026)</p>
+            <p><strong>Investment Payback:</strong> 18 months from first sales (Q4 2027)</p>
             <p><strong>Unit Economics:</strong> €0.30 gross margin per unit at scale</p>
           </div>
         </div>
