@@ -66,31 +66,40 @@ export async function POST(request: NextRequest) {
       },
       body: JSON.stringify({
         embeds: [embed],
-        username: 'Pulse Energy Bot',
-        avatar_url: 'https://cdn.discordapp.com/attachments/placeholder/pulse-logo.png'
+        username: 'Pulse Energy Bot'
       }),
     })
 
     if (!discordResponse.ok) {
-      console.error('Failed to send Discord notification:', await discordResponse.text())
-      return NextResponse.json(
-        { error: 'Failed to send notification' },
-        { status: 500 }
-      )
+      const errorText = await discordResponse.text()
+      console.error('Failed to send Discord notification:', {
+        status: discordResponse.status,
+        statusText: discordResponse.statusText,
+        error: errorText
+      })
+      
+      // Continue even if Discord fails - don't block the submission
+      console.warn('Discord notification failed, but submission recorded')
     }
 
-    // Log submission for audit trail
+    // Generate reference number
+    const referenceNumber = `PE-${Date.now().toString().slice(-6)}`
+    
+    // Log submission for audit trail (this always happens)
     console.log('Investment proposal submitted:', {
+      reference: referenceNumber,
       name: data.name,
       email: data.email,
       amount: data.investmentAmount,
       timestamp: data.timestamp,
+      discordSent: discordResponse.ok
     })
 
     return NextResponse.json({ 
       success: true, 
       message: 'Proposal submitted successfully',
-      reference: `PE-${Date.now().toString().slice(-6)}`
+      reference: referenceNumber,
+      notificationSent: discordResponse.ok
     })
 
   } catch (error) {
