@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts are loaded via Next.js font optimization */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .pulse-gradient {
+    @apply bg-gray-50;
+  }
+  
+  .pulse-button {
+    @apply bg-pulse-900 hover:bg-black text-white font-medium py-3 px-8 rounded-md transition-all duration-200 shadow-sm hover:shadow-md active:scale-95;
+  }
+  
+  .pulse-input {
+    @apply w-full px-4 py-3 bg-white border border-gray-200 rounded-md focus:border-pulse-900 focus:ring-2 focus:ring-pulse-900/10 transition-all duration-200 outline-none;
+  }
+  
+  .pulse-card {
+    @apply bg-white rounded-xl p-8 transition-all duration-200;
+  }
+  
+  .signature-canvas {
+    @apply border border-gray-200 rounded-md bg-white cursor-crosshair touch-none hover:border-gray-300 transition-colors duration-200;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  
+  .page-break {
+    page-break-before: always;
+  }
+}
