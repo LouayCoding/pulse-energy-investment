@@ -7,10 +7,14 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   
   body {
     font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
@@ -28,13 +32,15 @@
   }
   
   .pulse-card {
-    @apply bg-white rounded-xl p-8 lg:p-12 shadow-sm hover:shadow-md transition-all duration-200;
+    @apply bg-white rounded-lg sm:rounded-xl p-5 sm:p-8 lg:p-12 shadow-sm hover:shadow-md transition-all duration-200;
   }
   
-  @media (max-width: 768px) {
-    .pulse-card {
-      @apply p-6;
-    }
+  .pulse-heading {
+    @apply font-montserrat text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8;
+  }
+  
+  .pulse-subheading {
+    @apply font-montserrat text-base sm:text-lg font-bold mb-3 sm:mb-4 flex items-center gap-2;
   }
   
   .signature-canvas {

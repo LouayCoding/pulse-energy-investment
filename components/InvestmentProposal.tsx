@@ -150,7 +150,7 @@ export default function InvestmentProposal() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 py-12 lg:px-12 xl:px-16">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -158,7 +158,7 @@ export default function InvestmentProposal() {
         >
           <Header />
           
-          <div className="space-y-12">
+          <div className="space-y-6 sm:space-y-8 lg:space-y-12">
             <ExecutiveSummary />
             <KeyTerms />
             <MarketOpportunity />

@@ -12,16 +12,16 @@ export default function ExecutiveSummary() {
       transition={{ duration: 0.6 }}
       className="pulse-card"
     >
-      <h2 className="font-montserrat text-3xl font-bold text-gray-900 mb-8">
+      <h2 className="pulse-heading">
         Executive Summary
       </h2>
       
-      <div className="bg-red-50 p-6 rounded-xl mb-6">
-        <h3 className="font-montserrat text-lg font-bold text-red-800 mb-4 flex items-center gap-2">
+      <div className="bg-red-50 p-4 sm:p-6 rounded-lg sm:rounded-xl mb-4 sm:mb-6">
+        <h3 className="pulse-subheading text-red-800">
           <AlertTriangle className="h-5 w-5" />
           URGENT: Production Capacity Crisis
         </h3>
-        <div className="space-y-3 text-sm text-red-700">
+        <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-red-700">
           <p><strong>Current Situation:</strong> Demand exceeds production capacity by 300% - we are severely backlogged</p>
           <p><strong>Lost Sales:</strong> €150,000+ in confirmed orders cannot be fulfilled due to production constraints</p>
           <p><strong>Retailer Pressure:</strong> Albert Heijn, Jumbo, and Plus demanding increased supply commitments</p>
@@ -30,12 +30,12 @@ export default function ExecutiveSummary() {
         </div>
       </div>
 
-      <div className="bg-green-50 p-6 rounded-xl mb-6">
-        <h3 className="font-montserrat text-lg font-bold text-green-800 mb-4 flex items-center gap-2">
+      <div className="bg-green-50 p-4 sm:p-6 rounded-lg sm:rounded-xl mb-4 sm:mb-6">
+        <h3 className="pulse-subheading text-green-800">
           <TrendingUp className="h-5 w-5" />
           Market Traction Exceeding All Projections
         </h3>
-        <div className="space-y-3 text-sm text-green-700">
+        <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-green-700">
           <p><strong>Demand Surge:</strong> Initial test batches sold out within 48 hours across all retail locations</p>
           <p><strong>Reorder Velocity:</strong> Retailers requesting 5x initial order quantities for next delivery</p>
           <p><strong>Consumer Response:</strong> 4.8/5 star rating with 95% repurchase intent in consumer surveys</p>
@@ -44,7 +44,7 @@ export default function ExecutiveSummary() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-6 sm:mt-8">
         <div className="bg-gray-50 p-5 rounded-xl text-center">
           <div className="font-montserrat text-sm font-semibold text-gray-600 mb-1">Founder & CEO</div>
           <div className="text-gray-800 font-medium">Rachid El Arcoubi</div>
